@@ -12,7 +12,12 @@ endif()
 project ("OS_Lab1")
 
 # Добавьте источник в исполняемый файл этого проекта.
-add_executable (OS_Lab1 "OS_Lab1.cpp" "OS_Lab1.h")
+add_subdirectory(Creator)
+add_subdirectory(Reporter)
+
+add_executable (OS_Lab1 D:/IT/WIN32API/OS_Lab1/main.cpp)
+
+target_link_libraries(OS_Lab1 creator reporter)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET OS_Lab1 PROPERTY CXX_STANDARD 20)
