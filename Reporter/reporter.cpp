@@ -43,6 +43,7 @@ int main(int argc, char* argv[])
     {
         reportOutput << std::setw(3) << human.ID << std::setw(20) << human.name << std::setw(7) << human.hours << std::setw(10) << human.hours * hourlyPay << std::endl;
     }
-
+    binInput.close();
+    reportOutput.close();
     return 0;
 }
