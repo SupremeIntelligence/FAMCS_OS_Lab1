@@ -1,12 +1,13 @@
-#include <windows.h>
 #include <iostream>
 
-extern int mainÑreator();
-extern int mainReporter();
+extern int mainreporter();
 
-int main() {
-    std::cout << "Main program" << std::endl;
-    mainÑreator();
-    mainReporter();
+int main(int argc, char*argv[]) 
+{
+    std::cout << argv[0];
+    std::cout << "main program" << std::endl;
+    mainreporter();
     return 0;
 }
+
+

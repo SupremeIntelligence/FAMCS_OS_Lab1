@@ -5,7 +5,7 @@
 
 struct employee
 {
-    int num; // идентификационный номер сотрудника
+    int ID; // идентификационный номер сотрудника
     char name[10]; // имя сотрудника
     double hours; // количество отработанных часов
 };
@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
     std::ofstream binOutput(filename, std::ios::binary);
     if (!binOutput.is_open())
     {
-        std::cout << "Error openning binary file." << std::endl;
+        std::cerr << "Error openning binary file." << std::endl;
         return -1;
     }
 
@@ -30,8 +30,8 @@ int main(int argc, char* argv[])
 
     for (int i = 0; i < recordNumber; i++)
     {
-        std::cin >> human.num >> human.name >> human.hours;
-        binOutput.write(reinterpret_cast<char*> (&human), sizeof(human)); //заменить преобразование типов на новый вариант
+        std::cin >> human.ID >> human.name >> human.hours;
+        binOutput.write(reinterpret_cast<char*> (&human), sizeof(human)); 
 
         if (i != recordNumber - 1)      std::cout << std::endl << "Enter the data of the next employee" << std::endl;
     }
