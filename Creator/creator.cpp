@@ -33,7 +33,7 @@ int main(int argc, char* argv[])
         std::cin >> human.ID >> human.name >> human.hours;
         binOutput.write(reinterpret_cast<char*> (&human), sizeof(human)); 
 
-        if (i != recordNumber - 1)      std::cout << std::endl << "Enter the data of the next employee" << std::endl;
+        if (i != recordNumber - 1)      std::cout << std::endl << "Enter the data of the next employee:" << std::endl;
     }
     binOutput.close();
     return 0;

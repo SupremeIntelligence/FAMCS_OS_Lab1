@@ -9,15 +9,13 @@ if (POLICY CMP0141)
   set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>")
 endif()
 
-project ("OS_Lab1")
+project (OS_Lab1)
 
 # Добавьте источник в исполняемый файл этого проекта.
 add_subdirectory(Creator)
 add_subdirectory(Reporter)
 
-add_executable (OS_Lab1 D:/IT/WIN32API/OS_Lab1/main.cpp)
-
-target_link_libraries(OS_Lab1 creator reporter)
+add_executable (OS_Lab1 main.cpp)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET OS_Lab1 PROPERTY CXX_STANDARD 20)
