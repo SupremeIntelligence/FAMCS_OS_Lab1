@@ -35,6 +35,7 @@ int main(int argc, char* argv[])
 
         if (i != recordNumber - 1)      std::cout << std::endl << "Enter the data of the next employee:" << std::endl;
     }
+    std::cout << std::endl<<std::endl;
     binOutput.close();
     return 0;
 }

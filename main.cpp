@@ -22,17 +22,17 @@ int main(int argc, char* argv[])
 
     //char projectDir[MAX_PATH];
     //GetCurrentDirectoryA(MAX_PATH, projectDir); //доработать
-    std::string str = "D:\\IT\\WIN32API\\OS_Lab1\\build\\Creator\\Debug\\Creator.exe";
+    std::string creatorPath = "D:\\IT\\WIN32API\\OS_Lab1\\build\\Creator\\Debug\\Creator.exe";
     //char lpczCreatorName[] = "D:\\IT\\WIN32API\\OS_Lab1\\build\\Creator\\Debug\\Creator.exe";
-    std::string creatorCommandLineStr = str + " " + binFilename + " " + std::to_string(recordNumber);
+    std::string creatorCommandLineStr = creatorPath + " " + binFilename + " " + std::to_string(recordNumber);
     LPSTR lpszCreatorCommandLine = const_cast<LPSTR>(creatorCommandLineStr.c_str());
 
 
-    STARTUPINFO si;
-    PROCESS_INFORMATION pi;
+    STARTUPINFO creatorSi;
+    PROCESS_INFORMATION creatorPi;
 
-    ZeroMemory(&si, sizeof(STARTUPINFO));
-    si.cb = sizeof(STARTUPINFO);
+    ZeroMemory(&creatorSi, sizeof(STARTUPINFO));
+    creatorSi.cb = sizeof(STARTUPINFO);
 
     if (!CreateProcess(
         NULL,
@@ -43,8 +43,8 @@ int main(int argc, char* argv[])
         0,
         NULL,
         NULL,
-        &si,
-        &pi
+        &creatorSi,
+        &creatorPi
 
     )
         )
@@ -53,16 +53,11 @@ int main(int argc, char* argv[])
         return 0;
     }
 
-    WaitForSingleObject(pi.hProcess, INFINITE);
+    WaitForSingleObject(creatorPi.hProcess, INFINITE);
 
-    CloseHandle(pi.hProcess);
-    CloseHandle(pi.hThread);
+    CloseHandle(creatorPi.hProcess);
+    CloseHandle(creatorPi.hThread);
 
-    std::cout << "Process closed" << std::endl;
-
-    //Запуск утилиты Creator и передача данных
-    //...
-    //Функция WaitForSingleObject
 
     std::ifstream binInput(binFilename, std::ios::binary);
     if (!binInput.is_open())
@@ -70,7 +65,9 @@ int main(int argc, char* argv[])
         std::cerr << "Error opening binary file";
         return -1;
     }
+
     employee human;
+    std::cout << "Outputting " + binFilename + ":"<<std::endl;
     while (binInput.read(reinterpret_cast<char*>(&human), sizeof(employee)))
     {
         std::cout << std::setw(3) << human.ID << std::setw(20) << human.name << std::setw(7) << human.hours << std::endl;
@@ -78,16 +75,46 @@ int main(int argc, char* argv[])
     binInput.close();
 
     std::string reportFilename;
-    int hourlyPay;
+    double hourlyPay;
     std::cout << "Enter the name of the report file:\t";
     std::cin >> reportFilename;
     std::cout << "Enter the value of the payment per hour:\t";
     std::cin >> hourlyPay;
     std::cout << std::endl;
 
-    //запуск утилиты Reporter и передача данных
-    //...
-    //Функция WaitForSingleObject
+    std::string reporterPath = "D:\\IT\\WIN32API\\OS_Lab1\\build\\Reporter\\Debug\\Reporter.exe";
+    std::string reporterCommandLineStr = reporterPath + " " + binFilename + " " + reportFilename + " " + std::to_string(hourlyPay);
+    LPTSTR lpszReporterCommandLine = const_cast<LPSTR>(reporterCommandLineStr.c_str());
+
+    STARTUPINFO reporterSi;
+    PROCESS_INFORMATION reporterPi;
+
+    ZeroMemory(&reporterSi, sizeof(STARTUPINFO));
+    reporterSi.cb = sizeof(STARTUPINFO);
+
+    if (!CreateProcess(
+        NULL,
+        lpszReporterCommandLine,
+        NULL,
+        NULL,
+        FALSE,
+        0,
+        NULL,
+        NULL,
+        &reporterSi,
+        &reporterPi
+
+    )
+        )
+    {
+        std::cerr << "Reporter.exe process is not created";
+        return 0;
+    }
+
+    WaitForSingleObject(reporterPi.hProcess, INFINITE);
+
+    CloseHandle(reporterPi.hProcess);
+    CloseHandle(reporterPi.hThread);
 
     std::ifstream reportInput(reportFilename);
     std::string line;
