@@ -1,7 +1,7 @@
 D:/IT/WIN32API/OS_Lab1/build/CMakeFiles/OS_Lab1.dir
 D:/IT/WIN32API/OS_Lab1/build/CMakeFiles/ALL_BUILD.dir
 D:/IT/WIN32API/OS_Lab1/build/CMakeFiles/ZERO_CHECK.dir
-D:/IT/WIN32API/OS_Lab1/build/Creator/CMakeFiles/creator.dir
+D:/IT/WIN32API/OS_Lab1/build/Creator/CMakeFiles/Creator.dir
 D:/IT/WIN32API/OS_Lab1/build/Creator/CMakeFiles/ALL_BUILD.dir
-D:/IT/WIN32API/OS_Lab1/build/Reporter/CMakeFiles/reporter.dir
+D:/IT/WIN32API/OS_Lab1/build/Reporter/CMakeFiles/Reporter.dir
 D:/IT/WIN32API/OS_Lab1/build/Reporter/CMakeFiles/ALL_BUILD.dir

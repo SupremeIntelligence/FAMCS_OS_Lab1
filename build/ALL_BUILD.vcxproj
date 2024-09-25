@@ -173,17 +173,17 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
+    <ProjectReference Include="D:\IT\WIN32API\OS_Lab1\build\Creator\Creator.vcxproj">
+      <Project>{237C8CC0-C976-3627-978F-6263F2943256}</Project>
+      <Name>Creator</Name>
+    </ProjectReference>
     <ProjectReference Include="D:\IT\WIN32API\OS_Lab1\build\OS_Lab1.vcxproj">
       <Project>{7F4A5E94-C3F8-34E8-B236-F5E9CC79BA46}</Project>
       <Name>OS_Lab1</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\IT\WIN32API\OS_Lab1\build\Creator\creator.vcxproj">
-      <Project>{33D06125-8A36-33FD-B794-BF7A8BCA893B}</Project>
-      <Name>creator</Name>
-    </ProjectReference>
-    <ProjectReference Include="D:\IT\WIN32API\OS_Lab1\build\Reporter\reporter.vcxproj">
-      <Project>{EE3D057B-73D4-38CA-98EC-4672D2763D7C}</Project>
-      <Name>reporter</Name>
+    <ProjectReference Include="D:\IT\WIN32API\OS_Lab1\build\Reporter\Reporter.vcxproj">
+      <Project>{9A0AD3C8-5C89-3C73-9A87-C12264FCCC02}</Project>
+      <Name>Reporter</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

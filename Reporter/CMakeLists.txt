@@ -4,4 +4,4 @@ cmake_minimum_required(VERSION 3.10)
 project(Reporter)
 
 # Добавляем исполняемый файл подпроекта
-add_library(reporter STATIC reporter.cpp)
+add_executable(Reporter reporter.cpp)

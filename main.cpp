@@ -2,6 +2,7 @@
 #include<fstream>
 #include<iomanip>
 #include<string>
+#include<Windows.h>
 
 struct employee
 {
@@ -55,6 +56,7 @@ int main(int argc, char*argv[])
     {
         std::cout << line << std::endl;
     }
+    reportInput.close();
     return 0;
 }
 

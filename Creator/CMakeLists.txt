@@ -4,4 +4,4 @@ cmake_minimum_required(VERSION 3.10)
 project(Creator)
 
 # Добавляем исполняемый файл подпроекта
-add_library(creator STATIC creator.cpp)
+add_executable(Creator creator.cpp)
