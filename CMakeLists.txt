@@ -14,6 +14,7 @@ project (OS_Lab1)
 # Добавьте источник в исполняемый файл этого проекта.
 add_subdirectory(Creator)
 add_subdirectory(Reporter)
+add_subdirectory(tests)
 
 add_executable (OS_Lab1 main.cpp)
 

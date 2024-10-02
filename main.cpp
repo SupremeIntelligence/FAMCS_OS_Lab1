@@ -21,8 +21,8 @@ std::string getProjectDir()
     else
     {
         std::cerr << "\nFailed to get current project directory\n";
+        return std::string::npos;
     }
-    
 }
 
 std::string getCreatorExePath(std::string buildDir)
@@ -149,7 +149,7 @@ int main(int argc, char* argv[])
         std::cout << line << std::endl;
     }
     reportInput.close();
-    return 0;
+    return EXIT_SUCCESS;
 }
 
 

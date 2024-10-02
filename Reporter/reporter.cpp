@@ -39,5 +39,5 @@ int main(int argc, char* argv[])
     }
     binInput.close();
     reportOutput.close();
-    return 0;
+    return EXIT_SUCCESS;
 }
