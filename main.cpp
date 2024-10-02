@@ -5,6 +5,37 @@
 #include<Windows.h>
 #include "employee.h"
 
+std::string getProjectDir()
+{
+    char projectDir[MAX_PATH];
+    if (GetCurrentDirectoryA(MAX_PATH, projectDir))
+    {
+        std::string buildDir = projectDir; //getting substring of the form .../project/out/build/x64-debug
+
+        size_t pos = buildDir.find("out\\build\\");
+        buildDir.erase(pos);
+
+        buildDir += "build\\";
+        return buildDir;
+    }
+    else
+    {
+        std::cerr << "\nFailed to get current project directory\n";
+    }
+    
+}
+
+std::string getCreatorExePath(std::string buildDir)
+{
+    buildDir += "Creator\\Debug\\Creator.exe";
+    return buildDir;
+}
+
+std::string getReporterExePath(std::string buildDir)
+{
+    buildDir += "Reporter\\Debug\\Reporter.exe";
+    return buildDir;
+}
 
 int main(int argc, char* argv[])
 {
@@ -15,12 +46,11 @@ int main(int argc, char* argv[])
     std::cout << "Enter the number of the records in the binary file:\t";
     std::cin >> recordNumber;
 
-    //char projectDir[MAX_PATH];
-    //GetCurrentDirectoryA(MAX_PATH, projectDir); //доработать
-    std::string creatorPath = "D:\\IT\\WIN32API\\OS_Lab1\\build\\Creator\\Debug\\Creator.exe";
-    //char lpczCreatorName[] = "D:\\IT\\WIN32API\\OS_Lab1\\build\\Creator\\Debug\\Creator.exe";
-    std::string creatorCommandLineStr = creatorPath + " " + binFilename + " " + std::to_string(recordNumber);
-    LPSTR lpszCreatorCommandLine = const_cast<LPSTR>(creatorCommandLineStr.c_str());
+    std::string projectDir = getProjectDir();
+    std::string creatorPath = getCreatorExePath(projectDir);
+
+    std::string creatorCommandLineArgs = creatorPath + " " + binFilename + " " + std::to_string(recordNumber);
+    LPSTR lpszCreatorCommandLine = const_cast<LPSTR>(creatorCommandLineArgs.c_str());
 
 
     STARTUPINFO creatorSi;
@@ -77,7 +107,7 @@ int main(int argc, char* argv[])
     std::cin >> hourlyPay;
     std::cout << std::endl;
 
-    std::string reporterPath = "D:\\IT\\WIN32API\\OS_Lab1\\build\\Reporter\\Debug\\Reporter.exe";
+    std::string reporterPath = getReporterExePath(projectDir);
     std::string reporterCommandLineStr = reporterPath + " " + binFilename + " " + reportFilename + " " + std::to_string(hourlyPay);
     LPTSTR lpszReporterCommandLine = const_cast<LPSTR>(reporterCommandLineStr.c_str());
 
