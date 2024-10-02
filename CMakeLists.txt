@@ -17,6 +17,10 @@ add_subdirectory(Reporter)
 
 add_executable (OS_Lab1 main.cpp)
 
+target_include_directories(${PROJECT_NAME} PUBLIC include)
+target_include_directories(Creator PUBLIC include)
+target_include_directories(Reporter PUBLIC include)
+
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET OS_Lab1 PROPERTY CXX_STANDARD 20)
 endif()

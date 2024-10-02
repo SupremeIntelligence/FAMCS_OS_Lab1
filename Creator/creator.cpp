@@ -2,13 +2,7 @@
 #include <iostream>
 #include<string>
 #include<fstream>
-
-struct employee
-{
-    int ID; // идентификационный номер сотрудника
-    char name[10]; // имя сотрудника
-    double hours; // количество отработанных часов
-};
+#include "employee.h"
 
 //Creator получает имя бинарного файла и количество записей
 

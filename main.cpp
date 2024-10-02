@@ -3,13 +3,8 @@
 #include<iomanip>
 #include<string>
 #include<Windows.h>
+#include "employee.h"
 
-struct employee
-{
-    int ID; // идентификационный номер сотрудника
-    char name[10]; // имя сотрудника
-    double hours; // количество отработанных часов
-};
 
 int main(int argc, char* argv[])
 {

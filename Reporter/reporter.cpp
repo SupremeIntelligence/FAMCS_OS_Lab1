@@ -3,13 +3,7 @@
 #include <iostream>
 #include<iomanip>
 #include<string>
-
-struct employee
-{
-    int ID; // идентификационный номер сотрудника
-    char name[10]; // имя сотрудника
-    double hours; // количество отработанных часов
-};
+#include "employee.h"
 
 //0
 //1 аргумент - имя бинарного файла
