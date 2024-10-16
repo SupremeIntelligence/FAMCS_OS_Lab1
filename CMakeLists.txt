@@ -11,6 +11,8 @@ endif()
 
 project (OS_Lab1)
 
+enable_testing()
+
 # Добавьте источник в исполняемый файл этого проекта.
 add_subdirectory(Creator)
 add_subdirectory(Reporter)

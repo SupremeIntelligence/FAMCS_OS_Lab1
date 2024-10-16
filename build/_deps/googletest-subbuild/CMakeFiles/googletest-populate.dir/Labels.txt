@@ -1,0 +1,14 @@
+# Target labels
+ googletest-populate
+# Source files and their labels
+D:/IT/WIN32API/OS_Lab1/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate
+D:/IT/WIN32API/OS_Lab1/build/_deps/googletest-subbuild/CMakeFiles/af954d53418b5d438a9fd6755466d4c2/googletest-populate.rule
+D:/IT/WIN32API/OS_Lab1/build/_deps/googletest-subbuild/CMakeFiles/c83dc9cbb5f7409c3a33ee5793c5cc47/googletest-populate-complete.rule
+D:/IT/WIN32API/OS_Lab1/build/_deps/googletest-subbuild/CMakeFiles/bfec55fbd7577ed1fb1f8a346c2b6bec/googletest-populate-build.rule
+D:/IT/WIN32API/OS_Lab1/build/_deps/googletest-subbuild/CMakeFiles/bfec55fbd7577ed1fb1f8a346c2b6bec/googletest-populate-configure.rule
+D:/IT/WIN32API/OS_Lab1/build/_deps/googletest-subbuild/CMakeFiles/bfec55fbd7577ed1fb1f8a346c2b6bec/googletest-populate-download.rule
+D:/IT/WIN32API/OS_Lab1/build/_deps/googletest-subbuild/CMakeFiles/bfec55fbd7577ed1fb1f8a346c2b6bec/googletest-populate-install.rule
+D:/IT/WIN32API/OS_Lab1/build/_deps/googletest-subbuild/CMakeFiles/bfec55fbd7577ed1fb1f8a346c2b6bec/googletest-populate-mkdir.rule
+D:/IT/WIN32API/OS_Lab1/build/_deps/googletest-subbuild/CMakeFiles/bfec55fbd7577ed1fb1f8a346c2b6bec/googletest-populate-patch.rule
+D:/IT/WIN32API/OS_Lab1/build/_deps/googletest-subbuild/CMakeFiles/bfec55fbd7577ed1fb1f8a346c2b6bec/googletest-populate-test.rule
+D:/IT/WIN32API/OS_Lab1/build/_deps/googletest-subbuild/CMakeFiles/bfec55fbd7577ed1fb1f8a346c2b6bec/googletest-populate-update.rule

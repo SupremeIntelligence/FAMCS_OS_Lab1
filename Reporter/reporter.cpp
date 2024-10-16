@@ -4,11 +4,13 @@
 #include<iomanip>
 #include<string>
 #include "employee.h"
+#include "ReporterLib.h"
 
 //0
 //1 аргумент - имя бинарного файла
 //2 аргумент - имя файла отчета
 //3 аргумент - оплата за час
+
 
 
 int main(int argc, char* argv[])
@@ -19,6 +21,7 @@ int main(int argc, char* argv[])
     std::ifstream binInput(binFilename, std::ios::binary);
     std::ofstream reportOutput(reportFilename);
 
+    Divide(3, 5);
     if (!binInput.is_open())
     {
         std::cerr << "Error opening binary file";

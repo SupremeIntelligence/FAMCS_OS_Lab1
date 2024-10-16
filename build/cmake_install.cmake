@@ -36,6 +36,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("D:/IT/WIN32API/OS_Lab1/build/Creator/cmake_install.cmake")
   include("D:/IT/WIN32API/OS_Lab1/build/Reporter/cmake_install.cmake")
+  include("D:/IT/WIN32API/OS_Lab1/build/tests/cmake_install.cmake")
 
 endif()
 

@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "D:/IT/WIN32API/OS_Lab1/_deps/googletest-subbuild/CMakeFiles/googletest-populate"
+		},
+		{
+			"file" : "D:/IT/WIN32API/OS_Lab1/_deps/googletest-subbuild/CMakeFiles/b1338580ad3cfc0affa2db095c74a0e0/googletest-populate.rule"
+		},
+		{
+			"file" : "D:/IT/WIN32API/OS_Lab1/_deps/googletest-subbuild/CMakeFiles/3459d8ea0eb1d353f3af942952797340/googletest-populate-complete.rule"
+		},
+		{
+			"file" : "D:/IT/WIN32API/OS_Lab1/_deps/googletest-subbuild/CMakeFiles/a5b6f3d377662dceacb93ab2091d84e7/googletest-populate-build.rule"
+		},
+		{
+			"file" : "D:/IT/WIN32API/OS_Lab1/_deps/googletest-subbuild/CMakeFiles/a5b6f3d377662dceacb93ab2091d84e7/googletest-populate-configure.rule"
+		},
+		{
+			"file" : "D:/IT/WIN32API/OS_Lab1/_deps/googletest-subbuild/CMakeFiles/a5b6f3d377662dceacb93ab2091d84e7/googletest-populate-download.rule"
+		},
+		{
+			"file" : "D:/IT/WIN32API/OS_Lab1/_deps/googletest-subbuild/CMakeFiles/a5b6f3d377662dceacb93ab2091d84e7/googletest-populate-install.rule"
+		},
+		{
+			"file" : "D:/IT/WIN32API/OS_Lab1/_deps/googletest-subbuild/CMakeFiles/a5b6f3d377662dceacb93ab2091d84e7/googletest-populate-mkdir.rule"
+		},
+		{
+			"file" : "D:/IT/WIN32API/OS_Lab1/_deps/googletest-subbuild/CMakeFiles/a5b6f3d377662dceacb93ab2091d84e7/googletest-populate-patch.rule"
+		},
+		{
+			"file" : "D:/IT/WIN32API/OS_Lab1/_deps/googletest-subbuild/CMakeFiles/a5b6f3d377662dceacb93ab2091d84e7/googletest-populate-test.rule"
+		},
+		{
+			"file" : "D:/IT/WIN32API/OS_Lab1/_deps/googletest-subbuild/CMakeFiles/a5b6f3d377662dceacb93ab2091d84e7/googletest-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"googletest-populate"
+		],
+		"name" : "googletest-populate"
+	}
+}

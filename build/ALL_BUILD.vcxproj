@@ -185,6 +185,26 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{9A0AD3C8-5C89-3C73-9A87-C12264FCCC02}</Project>
       <Name>Reporter</Name>
     </ProjectReference>
+    <ProjectReference Include="D:\IT\WIN32API\OS_Lab1\build\tests\Reporter_test.vcxproj">
+      <Project>{A98A1581-D7D8-301E-B739-72D46BF78685}</Project>
+      <Name>Reporter_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\IT\WIN32API\OS_Lab1\build\_deps\googletest-build\googlemock\gmock.vcxproj">
+      <Project>{CDBB2311-4AD0-376F-9152-75071321DCFC}</Project>
+      <Name>gmock</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\IT\WIN32API\OS_Lab1\build\_deps\googletest-build\googlemock\gmock_main.vcxproj">
+      <Project>{CA594864-0246-3C37-AEB9-F6FEB17A80EE}</Project>
+      <Name>gmock_main</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\IT\WIN32API\OS_Lab1\build\_deps\googletest-build\googletest\gtest.vcxproj">
+      <Project>{34CBA71E-09EC-34B6-B78F-69C69D6FD9AA}</Project>
+      <Name>gtest</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\IT\WIN32API\OS_Lab1\build\_deps\googletest-build\googletest\gtest_main.vcxproj">
+      <Project>{7DA2685B-AACC-3546-A2FC-EF9CCF1408AA}</Project>
+      <Name>gtest_main</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
