@@ -4,7 +4,7 @@
 #include<iomanip>
 #include<string>
 #include "employee.h"
-#include "ReporterLib.h"
+
 
 //0
 //1 аргумент - имя бинарного файла
@@ -14,14 +14,13 @@
 
 
 int main(int argc, char* argv[])
-{
+{   
     const std::string binFilename = argv[1];
     const std::string reportFilename = argv[2];
     double hourlyPay = std::stod(argv[3]);
     std::ifstream binInput(binFilename, std::ios::binary);
     std::ofstream reportOutput(reportFilename);
 
-    Divide(3, 5);
     if (!binInput.is_open())
     {
         std::cerr << "Error opening binary file";

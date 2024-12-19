@@ -11,11 +11,13 @@ std::string getProjectDir()
     if (GetCurrentDirectoryA(MAX_PATH, projectDir))
     {
         std::string buildDir = projectDir; //getting substring of the form .../project/out/build/x64-debug
-
-        size_t pos = buildDir.find("out\\build\\");
+        std::cout << buildDir<<"\n";
+        size_t pos = buildDir.find("\\build\\Debug");
+       
         buildDir.erase(pos);
-
-        buildDir += "build\\";
+        std::cout << buildDir<<"\n";
+        buildDir += "\\build\\";
+        std::cout << buildDir<<"\n";
         return buildDir;
     }
     else

@@ -1,3 +1,0 @@
-D:/IT/WIN32API/OS_Lab1/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
-D:/IT/WIN32API/OS_Lab1/_deps/googletest-subbuild/CMakeFiles/ALL_BUILD.dir
-D:/IT/WIN32API/OS_Lab1/_deps/googletest-subbuild/CMakeFiles/ZERO_CHECK.dir

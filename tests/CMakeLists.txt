@@ -1,23 +1,13 @@
 cmake_minimum_required(VERSION 3.8)
 
-include(FetchContent)	#загрузка гугл тестов
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 
-FetchContent_Declare(
-googletest
-#GIT_REPOSITORY https://github.com/google/googletest.git
-#GIT_TAG v1.15.2
-URL https://github.com/google/googletest/archive/refs/tags/release-1.12.1.zip
-)
+add_executable (ReporterTest reporter_test.cpp)	
 
-FetchContent_MakeAvailable(googletest)
-add_library (GTest::GTest INTERFACE IMPORTED)
+target_include_directories(ReporterTest PUBLIC ${CMAKE_SOURCE_DIR}/include ${CMAKE_SOURCE_DIR}/Reporter ${CMAKE_SOURCE_DIR})
 
-target_link_libraries(GTest::GTest INTERFACE gtest_main) #линковка проекта и гугл тестов
+target_link_libraries(ReporterTest PRIVATE gtest gtest_main) #линковка проекта и гугл тестов
 
-add_executable (Reporter_test reporter_test.cpp)	
+add_test(ReporterTest ReporterTest)					#добавление теста в CTest
 
-target_include_directories(Reporter_test PUBLIC ../Reporter/include)
 
-target_link_libraries(Reporter_test PUBLIC GTest::GTest ReporterLib)	#линковка проекта и тестов
-
-add_test(ReporterTest Reporter_test)					#добавление теста в CTest

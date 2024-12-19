@@ -4,6 +4,7 @@
 #include<fstream>
 #include "employee.h"
 
+
 //Creator получает имя бинарного файла и количество записей
 
 int main(int argc, char* argv[])

@@ -17,13 +17,18 @@ enable_testing()
 add_subdirectory(Creator)
 add_subdirectory(Reporter)
 add_subdirectory(tests)
+add_subdirectory(googletest)
 
 add_executable (OS_Lab1 main.cpp)
+
+include_directories(include)
 
 target_include_directories(${PROJECT_NAME} PUBLIC include)
 target_include_directories(Creator PUBLIC include)
 target_include_directories(Reporter PUBLIC include)
 
+
+#add_test(Reporter_test Reporter)
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET OS_Lab1 PROPERTY CXX_STANDARD 20)
 endif()

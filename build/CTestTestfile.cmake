@@ -7,3 +7,4 @@
 subdirs("Creator")
 subdirs("Reporter")
 subdirs("tests")
+subdirs("googletest")
